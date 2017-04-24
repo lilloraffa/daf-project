@@ -13,4 +13,6 @@ Dataset in DAF are of three types: standard, ordinary and raw. **Standard datase
 
 ## Where to go from here
 We advise you read all .md file in the root of this repository to get the full flavor of data management in DAF. In particular, we'd suggest the following order:
-1. [tbd]s
+1. [Data Schema & Metadata in DAF](https://github.com/lilloraffa/daf-datamgmt/blob/master/schema_metadata.md)
+2. [Data Structure & Ingestion Pipeline](https://github.com/lilloraffa/daf-datamgmt/blob/master/data_structure_ingestion.md)
+3. TBC - More to come ...
