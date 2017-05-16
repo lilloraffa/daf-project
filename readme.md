@@ -1,12 +1,12 @@
 # Data & Analytics Framework (DAF)
 The Data & Analytics Framework (DAF) is a combination of:
 - A **Big Data Platform** to centralize and store (data lake), manipulate and standardize (data engine) and re-distribute (API & Data Application) data and insights.
-- A **Data Team** (datascientists + data engineers) which uses and evolve the Big Data Platform to analyze data, create ML models and build data applications and data visualization products.
+- A **Data Team** (data scientists + data engineers) which uses and evolve the Big Data Platform to analyze data, create ML models and build data applications and data visualization products.
 
 DAF has a twofold goal: 1. eliminate silos into which data are typically "trapped", and make entities be logically interconnected so to shed light on phenomena by looking at them via multiple perspectives; 2. easy analysts and data scientists make analysis and build applications that uses the insights from data to create "intelligent" services.
 
 ## Logical Components
-DAF is made of the following logical components, that are technically detailed in the Architecture document here (TBD).
+DAF is made of the following logical components, that are technically detailed in the [Architecture document here] (https://github.com/teamdigitale/daf/blob/master/docs/architecture/architecture.md).
 
 ### Data Ingestion & Catalogue Manager
 In DAF, data is organized into logical entities called *dataset*. A dataset is a combination of metadata, data, and other operational info needed to manage ingestion, update, lookup, creation of views and alike. It is general purpose, in the sense that it can be used to model both batch, streaming, semi-structured data.
@@ -69,6 +69,6 @@ Data Portal is a web based user interface for the DAF, giving users the capabili
 - **User Profile**: a restricted area where the user can see and manage the content she created, as well as have access to personal data that are available in DAF (i.e. the citizen dashboard). The latter functionality will be accessed with a 2nd/3rd level SPID, meanwhile for the first part a lighter registration may be enough.
 
 ## Where to go from here
-- DAF Architecture [here](https://github.com/teamdigitale/daf/blob/master/docs/architecture/architecture.md) 
+- DAF Architecture [here](https://github.com/teamdigitale/daf/blob/master/docs/architecture/architecture.md)
 - Data Management in DAF [here](https://github.com/lilloraffa/daf-datamgmt/blob/master/datamgmt/readme.md)
 - Ingestion and Data Structure [here](https://github.com/lilloraffa/daf-datamgmt/blob/master/datamgmt/ingestion/data_structure_ingestion.md)]
