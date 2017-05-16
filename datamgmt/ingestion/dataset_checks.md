@@ -1,7 +1,9 @@
-# Data Schema & Metadata in DAF
-Standard, Ordinary and Raw datasets are all coupled with metadata information describing the characteristics and content of the datasets. As anticipated above, the three types of datasets have different sets of rules and info required, more stringent for the Standard datasets, less for Ordinary, lower for Raw. Here we describe the conceptual framework used to manage the schema and metadata system, and then we'll describe how the framework is used for the three datasets.
+# Checks on Dataset coherence
+Several checks are performed during the creation of a new dataset as well as anytime new data comes in to feed an existing one.
 
-The schema and metadata framework is based on three concepts/tools: Standard Schema, Conversion Schema, dataset metadata.
+# InjMod description
+
+###### to be modified for the context.
 
 ## Standard Schema
 Standard Schema defines a Standard dataset: it declares the existence of a specific Standard dataset and contains a set of information describing its structure and content. It has the following info:
