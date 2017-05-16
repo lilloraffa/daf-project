@@ -6,7 +6,7 @@ The Data & Analytics Framework (DAF) is a combination of:
 DAF has a twofold goal: 1. eliminate silos into which data are typically "trapped", and make entities be logically interconnected so to shed light on phenomena by looking at them via multiple perspectives; 2. easy analysts and data scientists make analysis and build applications that uses the insights from data to create "intelligent" services.
 
 ## Logical Components
-DAF is made of the following logical components, that are technically detailed in the [Architecture document here] (https://github.com/teamdigitale/daf/blob/master/docs/architecture/architecture.md).
+DAF is made of the following logical components, that are technically detailed in the [Architecture document here](https://github.com/teamdigitale/daf/blob/master/docs/architecture/architecture.md).
 
 ### Data Ingestion & Catalogue Manager
 In DAF, data is organized into logical entities called *dataset*. A dataset is a combination of metadata, data, and other operational info needed to manage ingestion, update, lookup, creation of views and alike. It is general purpose, in the sense that it can be used to model both batch, streaming, semi-structured data.
