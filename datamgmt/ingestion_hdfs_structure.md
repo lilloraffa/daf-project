@@ -1,4 +1,4 @@
-# Data Structure & Ingestion Pipeline
+# Ingestion & HDFS Folder Structure
 Regardless of the nature of the dataset to be ingested in the platform, the input dataset get stored into a landing area in HDFS. Once there, the platform activate the following pipeline:
 - it reads all files contained in a configurable folder. Here, data should be organized into subfolders corresponding to each data owner (the entity that sends the data into the platform).
 - Once the dataset has been read, the module looks for the Conversion Schema associated with it. If the it is found, the module try to see if there is an associated "standard schema".
@@ -7,8 +7,8 @@ Regardless of the nature of the dataset to be ingested in the platform, the inpu
 - Saving methodology depends on the fact that the dataset belongs to the Standard dataset or not.
 - In case there is no Conversion Schema associated with the dataset, the platform consider it as a Raw dataset, so it tries to find a corresponding basic Metadata, and if found, it saves the data accordingly.
 
-## Data Structure
-The data structure in HDFS and, eventually, the structure in a database like HBase if required, is designed to be as flexible as possible based on the use cases of each dataset type (Standard, Ordinary and Raw).
+## HDFS Folder Structure
+The folder structure in HDFS and, eventually, the structure in a database like HBase if required, is designed to be as flexible as possible based on the use cases of each dataset type (Standard, Ordinary and Raw).
 
 ### Standard Dataset Structure
 The structure in HDFS works as follows: `/ stdData / Category / Group Ownership / Dataset / [partition by owner]`

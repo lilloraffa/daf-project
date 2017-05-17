@@ -9,7 +9,7 @@
       "type": {"format": "json", "required": 1, "__comment": "It can be a json object for complex type, or an array of string for primitive types (the latter may contains 'null' in case the field can be nullable)."},
       "doc": {"format": "string", "required": 0, "__comment": "Documentation/info for user prurposes."},
       "default": {"format": "multiple", "required": 0, "__comment": "Default value for the field"},
-      "metadata": {"format": "json", "required": 1, "__comment": "JSON object containing metadata information for the field.", "val":
+      "metadata": {"format": "json", "required": 0, "__comment": "JSON object containing metadata information for the field.", "val":
         {
           "name_lang": {"format": "json", "required": 0, "val":
             {

@@ -71,4 +71,5 @@ Data Portal is a web based user interface for the DAF, giving users the capabili
 ## Where to go from here
 - DAF Architecture [here](https://github.com/teamdigitale/daf/blob/master/docs/architecture/architecture.md)
 - Data Management in DAF [here](https://github.com/lilloraffa/daf-datamgmt/blob/master/datamgmt/readme.md)
+- DataMgmt Microservices [here](https://github.com/lilloraffa/daf-datamgmt/blob/master/datamgmt/datasetsrv/readme.md)]
 - Ingestion and Data Structure [here](https://github.com/lilloraffa/daf-datamgmt/blob/master/datamgmt/ingestion/data_structure_ingestion.md)]
