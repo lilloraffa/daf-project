@@ -20,6 +20,10 @@ The info collected so far is then sent to a module that calculate the automatica
 
 ### Step 4. Save the metadata info in the Catalog Manager
 
+
+## Add Data to the new created Dataset
+If the input information contains indication of data to be associated with the new Dataset, then the pipeline will continue with the following steps.
+
 ### Step 5. Store the data
 The dataset URI is then enough to store the dataset in the appropriate hdfs folder and format.
 
