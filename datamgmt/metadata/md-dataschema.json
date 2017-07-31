@@ -17,9 +17,9 @@
               "ita": {"format": "string", "required": 0},
             }
           },
-          "desc": {"format": "string", "required": 0},
-          "desc_lang": {"format": "json", "required": 0, "val":
+          "desc": {"format": "json", "required": 0, "val":
             {
+              "val": {"format": "string", "required": 1},
               "eng": {"format": "string", "required": 0},
               "ita": {"format": "string", "required": 0},
             }

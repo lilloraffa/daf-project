@@ -1,56 +1,85 @@
 {
-  "dct:identifier": {"format": "string", "required": 1, "__comment": "Unique identifier for the dataset."},
-  "dct:title": {"format": "json", "required": 1, "__comment": "Name of the dataset", "val":
-    {
-      "val": {"format": "string", "required": 1, "__comment": "Default value to be used if no language is specified."},
-      "it": {"format": "string", "required": 0, "__comment": "Value corresponding to the language defined in the field. I.e. in this case Italian."}
-    }
-
-  },
-  "dct:description": {"format": "json", "required": 1, "__comment": "Description of the dataset", "val":
-    {
-      "val": {"format": "string", "required": 1, "__comment": "Default value to be used if no language is specified."},
-      "it": {"format": "string", "required": 0, "__comment": "Value corresponding to the language defined in the field. I.e. in this case Italian."}
-    }
-  },
-  "dcat:theme": {"format": "json", "required": 1, "__comment": "Description of the dataset", "val":
-    {
-      "@id": {"format": "string", "required": 1, "__comment": "Uri of the theme based on the European Classification"},
-      "val": {"format": "string", "required": 1, "__comment": "Default value to be used if no language is specified."},
-      "it": {"format": "string", "required": 0, "__comment": "Value corresponding to the language defined in the field. I.e. in this case Italian."}
-    }
-  },
-  "dct:rightsHolder": {"format": "json", "required": 1, "__comment": "The Owner of the dataset", "val":
-    {
-      "@id": {"format": "string", "required": 1, "__comment": "Uri of the theme based on the European Classification"},
-      "val": {"format": "string", "required": 1, "__comment": "Default value to be used if no language is specified."},
-      "it": {"format": "string", "required": 0, "__comment": "Value corresponding to the language defined in the field. I.e. in this case Italian."}
-    }
-  },
-  "dct:accrualPeriodicity": {"format": "json", "required": 1, "__comment": "Frequency at which the dataset get updated", "val":
-    {
-      "@id": {"format": "string", "required": 1, "__comment": "Uri of the theme based on the European Classification"},
-      "val": {"format": "string", "required": 1, "__comment": "Default value to be used if no language is specified."},
-      "it": {"format": "string", "required": 0, "__comment": "Value corresponding to the language defined in the field. I.e. in this case Italian."}
-    }
-  },
-  "dct:subject": {"format": "Array(json)", "required": 0, "__comment": "Categories under the selected theme that can better describe the dataset. It is an array whose number of elements represents the hierarchy of the classification. I.e. [class, sub-class, sub-sub-class]", "val":
+  "dct_identifier": {"format": "string", "required": 1, "__comment": "Unique identifier for the dataset."},
+  "dct_title": {"format": "Array(json)", "required": 1, "__comment": "Name of the dataset", "val":
     [
       {
-        "@id": {"format": "string", "required": 0, "__comment": "Uri of the theme based on the European Classification"},
-        "val": {"format": "string", "required": 1, "__comment": "Default value to be used if no language is specified."},
-        "it": {"format": "string", "required": 0, "__comment": "Value corresponding to the language defined in the field. I.e. in this case Italian."}
+        "language": {"format": "string", "required": 1, "__comment": "Language id"},
+        "val": {"format": "string", "required": 0, "__comment": "Value corresponding to the language defined in the field."}
       }
     ]
   },
-  "dcat:landingPage": {"format": "string", "required": 0, "__comment": "URL of the webpage of the dataset if it exists."},
-  "dct:language": {"format": "json", "required": 1, "__comment": "Language of the dataset.", "val":
+  "dct_description": {"format": "Array(json)", "required": 1, "__comment": "Description of the dataset", "val":
+    [
+      {
+        "language": {"format": "string", "required": 1, "__comment": "Language id"},
+        "val": {"format": "string", "required": 0, "__comment": "Value corresponding to the language defined in the field."}
+      }
+    ]
+  },
+  "dcat_theme": {"format": "json", "required": 1, "__comment": "Description of the dataset", "val":
     {
-      "@id": {"format": "string", "required": 0, "__comment": "Uri of the theme based on the European Classification"},
-      "val": {"format": "string", "required": 1, "__comment": "Name of the language used."}
+      "id": {"format": "string", "required": 1, "__comment": "Uri of the theme based on the European Classification"},
+      "text": {"format": "Array(json)", "required": 1, "__comment": "Text/Name of the Theme, ordered by languages", "val":
+        [
+          {
+            "language": {"format": "string", "required": 1, "__comment": "Language id"},
+            "value": {"format": "string", "required": 0, "__comment": "Value corresponding to the language defined in the field."}
+          }
+        ]
+      },
     }
   },
-  "dcat:keyword": {"format": "Array(string)", "required": 0, "__comment": "List of keywords / tags that describe the content and usage of the dataset."},
-  "dcat:spatial": {"format": "string", "required": 0, "__comment": "Uri of geonames.org resource."}
+  "dct_rightsHolder": {"format": "json", "required": 1, "__comment": "The Owner of the dataset", "val":
+    {
+      "id": {"format": "string", "required": 1, "__comment": "Uri of the rightsholder"},
+      "text": {"format": "Array(json)", "required": 1, "__comment": "Text/Name of the Theme, ordered by languages", "val":
+        [
+          {
+            "language": {"format": "string", "required": 1, "__comment": "Language id"},
+            "value": {"format": "string", "required": 0, "__comment": "Value corresponding to the language defined in the field."}
+          }
+        ]
+      },
+    }
+  },
+  "dct_accrualPeriodicity": {"format": "json", "required": 1, "__comment": "Frequency at which the dataset get updated", "val":
+    {
+      "id": {"format": "string", "required": 1, "__comment": "Uri of the periodicity according to european classification"},
+      "text": {"format": "Array(json)", "required": 1, "__comment": "Text/Name of the Theme, ordered by languages", "val":
+        [
+          {
+            "language": {"format": "string", "required": 1, "__comment": "Language id"},
+            "value": {"format": "string", "required": 0, "__comment": "Value corresponding to the language defined in the field."}
+          }
+        ]
+      },
+    }
+  },
+  "dct_subject": {"format": "Array(json)", "required": 0, "__comment": "Categories under the selected theme that can better describe the dataset. It is an array whose number of elements represents the hierarchy of the classification. I.e. [class, sub-class, sub-sub-class]", "val":
+    [
+      {
+        "id": {"format": "string", "required": 1, "__comment": "Uri of the theme based on the European Classification"},
+        "text": {"format": "Array(json)", "required": 1, "__comment": "Text/Name of the Theme, ordered by languages", "val":
+          [
+            {
+              "language": {"format": "string", "required": 1, "__comment": "Language id"},
+              "value": {"format": "string", "required": 0, "__comment": "Value corresponding to the language defined in the field."}
+            }
+          ]
+        },
+      }
+    ]
+  },
+  "dcat_landingPage": {"format": "string", "required": 0, "__comment": "URL of the webpage of the dataset if it exists."},
+  "dct_language": {"format": "json", "required": 1, "__comment": "Language of the dataset.", "val":
+    [
+      {
+        "id": {"format": "string", "required": 1, "__comment": "Uri of the theme based on the European Classification"},
+        "value": {"format": "Array(json)", "required": 1, "__comment": "Text/Name of the Theme, ordered by languages", "val":}
+      }
+    ]
+  },
+  "dcat_keyword": {"format": "Array(string)", "required": 0, "__comment": "List of keywords / tags that describe the content and usage of the dataset."},
+  "dcat_spatial": {"format": "string", "required": 0, "__comment": "Uri of geonames.org resource."}
 
 }
